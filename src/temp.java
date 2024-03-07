@@ -8,7 +8,6 @@ public class temp {
         String trash = "";
         while(true) {
             System.out.println("are you starting with F or C");
-            if (in.hasNextLine()){
                 temptype = in.nextLine();
                 if (temptype.equalsIgnoreCase("c")){
                     System.out.println("what is the temp");
@@ -17,24 +16,16 @@ public class temp {
                     System.out.println("Temp converted: " + tempF);
                     break;
 
+                }else if(temptype.equalsIgnoreCase("f")){
+                    System.out.println("what is the temp");
+                    tempF = in.nextDouble();
+                    tempC= (tempF * 5/9) - 32;
+                    System.out.println("Temp converted: " + tempC);
+                    break;
+                }else{
+                    System.out.println("you gave me trash " + temptype);
+
                 }
-            }
-
-
-            if (in.hasNextDouble()) {
-
-
-
-            } else {
-
-                trash = in.nextLine();
-                in.nextLine();
-                System.out.println("you gave me trash: " + trash);
-                System.exit(0);
-
-
-            }
-
         }
     }
 }
